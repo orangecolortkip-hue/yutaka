@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大山 日帰り登山のしおり｜2026.8.29(土)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Roboto+Mono:wght@500&display=swap');
+
+:root{
+  --ink:#2c352d; --bg:#f6f9f2; --card:#ffffff;
+  --green:#3f9670; --green-deep:#2b6b4f;
+  --sky:#79bfd6; --sky-soft:#e3f0f5;
+  --shu:#e2683c; --gold:#dfa32f; --mist:#828b82; --line:#e4e8de;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;line-height:1.75;font-size:15px;letter-spacing:.02em;padding-bottom:48px;}
+.wrap{max-width:540px;margin:0 auto;}
+
+/* HERO (bright) */
+.hero{position:relative;background:linear-gradient(180deg,#e3f0f5 0%,#eef6e8 100%);padding:36px 24px 0;overflow:hidden;}
+.sun{position:absolute;top:26px;right:30px;width:66px;height:66px;border-radius:50%;background:radial-gradient(circle at 50% 50%,#ffe38a 0%,#f4c74e 70%,#f4c74e 100%);box-shadow:0 0 30px 10px rgba(244,199,78,.35);}
+.hero .eyebrow{position:relative;font-size:12px;letter-spacing:.32em;color:var(--green-deep);text-indent:.32em;margin-bottom:14px;}
+.hero h1{position:relative;font-family:"Shippori Mincho B1",serif;font-weight:700;font-size:40px;line-height:1.15;letter-spacing:.04em;color:var(--green-deep);}
+.hero h1 small{display:block;font-size:15px;font-weight:500;letter-spacing:.16em;color:#4f7a63;margin-top:10px;}
+.hero .concept{position:relative;margin-top:16px;font-size:13.5px;color:#3f5a4b;max-width:26em;}
+.hero .names{position:relative;margin-top:18px;display:flex;flex-wrap:wrap;gap:7px;}
+.hero .names span{font-size:12px;letter-spacing:.06em;background:#fff;border:1px solid #bfe0cd;border-radius:999px;padding:4px 12px;color:var(--green-deep);}
+.hero .date{position:relative;margin-top:20px;font-family:"Roboto Mono",monospace;font-size:14px;letter-spacing:.14em;color:var(--shu);font-weight:500;}
+.hills{display:block;width:100%;height:78px;margin-top:16px;position:relative;}
+
+/* SECTION */
+section{padding:30px 22px 6px;}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px;}
+.sec-no{font-family:"Roboto Mono",monospace;font-size:12px;font-weight:500;color:var(--shu);letter-spacing:.1em;border:1.5px solid var(--shu);border-radius:6px;padding:2px 7px;flex:none;}
+.sec-head h2{font-family:"Shippori Mincho B1",serif;font-weight:700;font-size:22px;letter-spacing:.05em;color:var(--green-deep);}
+.sec-head .en{font-size:10.5px;letter-spacing:.28em;color:var(--mist);display:block;margin-top:3px;font-family:"Roboto Mono",monospace;}
+
+/* WISH */
+.wishes{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.wish{background:var(--card);border-radius:14px;padding:13px 14px;border:1px solid var(--line);box-shadow:0 1px 3px rgba(43,107,79,.05);}
+.wish .who{font-weight:700;font-size:14px;color:var(--green);}
+.wish .want{font-size:12.5px;color:var(--ink);margin:3px 0 8px;}
+.wish .got{font-size:11.5px;color:var(--mist);border-top:1px dashed var(--line);padding-top:7px;}
+.wish .got b{color:var(--shu);font-weight:700;}
+
+/* MEET / TRAINS */
+.meetbox{background:linear-gradient(135deg,#4aa87d,#37916b);color:#fff;border-radius:16px;padding:16px 18px;margin-bottom:16px;text-align:center;box-shadow:0 3px 10px rgba(43,107,79,.18);}
+.meetbox .lbl{font-size:11px;letter-spacing:.22em;color:#daf0e4;}
+.meetbox .place{font-family:"Shippori Mincho B1",serif;font-size:22px;font-weight:700;margin:4px 0;}
+.meetbox .time{font-family:"Roboto Mono",monospace;font-size:30px;color:#fff2cf;letter-spacing:.04em;}
+.trains{display:flex;flex-direction:column;gap:8px;}
+.tr{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 14px;display:flex;align-items:center;gap:12px;}
+.tr .nm{font-weight:700;font-size:13.5px;flex:none;width:96px;white-space:nowrap;color:var(--green-deep);}
+.tr .rt{font-size:11.5px;color:var(--mist);line-height:1.5;}
+.tr .dep{margin-left:auto;flex:none;text-align:right;}
+.tr .dep .t{font-family:"Roboto Mono",monospace;font-size:17px;color:var(--shu);font-weight:500;}
+.tr .dep .c{font-size:9.5px;color:var(--mist);letter-spacing:.05em;}
+.note{font-size:12px;color:var(--ink);background:#eef6ef;border:1px solid #cfe7d6;border-radius:12px;padding:11px 14px;margin-top:12px;}
+.note b{color:var(--green-deep);}
+
+/* PASS BOXES */
+.pass{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 15px;margin-top:12px;box-shadow:0 1px 3px rgba(43,107,79,.05);}
+.pass h3{font-family:"Shippori Mincho B1",serif;font-size:15.5px;color:var(--green-deep);margin-bottom:8px;}
+.cov{list-style:none;}
+.cov li{font-size:12.5px;padding:4px 0 4px 22px;position:relative;line-height:1.55;}
+.cov li::before{content:"\2713";position:absolute;left:0;color:var(--green);font-weight:700;}
+.cov li b{color:var(--shu);}
+.deal{background:#fdf3e7;border:1px solid #f0d3a8;border-radius:12px;padding:11px 14px;margin-top:10px;}
+.deal li{list-style:none;font-size:12px;padding:3px 0 3px 20px;position:relative;line-height:1.55;}
+.deal li::before{content:"\25CE";position:absolute;left:0;color:var(--gold);}
+.deal li b{color:var(--shu);}
+.steps{list-style:none;counter-reset:s;margin-top:4px;}
+.steps li{position:relative;padding:6px 0 6px 32px;font-size:12.5px;line-height:1.6;border-bottom:1px dashed var(--line);}
+.steps li:last-child{border-bottom:none;}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:6px;width:21px;height:21px;background:var(--green);color:#fff;border-radius:50%;font-family:"Roboto Mono",monospace;font-size:11px;display:flex;align-items:center;justify-content:center;}
+.steps b{color:var(--shu);}
+.linkbtn{display:inline-block;margin-top:10px;font-size:12px;color:#fff;background:var(--green);border-radius:8px;padding:7px 14px;text-decoration:none;}
+
+/* TRANSIT INFO */
+.ibox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 15px;margin-bottom:11px;box-shadow:0 1px 3px rgba(43,107,79,.05);}
+.ibox h3{font-family:"Shippori Mincho B1",serif;font-size:15.5px;font-weight:700;color:var(--green-deep);margin-bottom:5px;}
+.ibox .how{font-size:12.5px;color:var(--ink);}
+.tt{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px;}
+.tt span{font-family:"Roboto Mono",monospace;font-size:12px;background:#eef4ec;border:1px solid var(--line);border-radius:6px;padding:3px 8px;color:var(--green-deep);}
+.tt span.rec{background:var(--shu);color:#fff;border-color:var(--shu);}
+.ibox .cap{font-size:11px;color:var(--mist);margin-top:7px;}
+.noriba{margin:10px 0 2px;}
+.noriba svg{width:100%;height:auto;display:block;}
+.noriba text{font-family:"Zen Kaku Gothic New",sans-serif;font-size:11px;fill:var(--ink);}
+
+/* TIMELINE */
+.trail{position:relative;margin:4px 0 8px;padding-left:6px;}
+.stop{position:relative;padding:0 0 22px 58px;}
+.stop::before{content:"";position:absolute;left:19px;top:6px;bottom:-6px;border-left:2px dotted #bcd6c4;}
+.stop:last-child::before{display:none;}
+.stop .mk{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;background:var(--card);border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-family:"Roboto Mono",monospace;font-size:12px;font-weight:500;color:var(--green);box-shadow:0 0 0 4px var(--bg);z-index:1;}
+.stop.hi .mk{background:var(--shu);border-color:var(--shu);color:#fff;}
+.stop .tm{font-family:"Roboto Mono",monospace;font-size:13px;color:var(--shu);letter-spacing:.03em;}
+.stop .ti{font-family:"Shippori Mincho B1",serif;font-size:16px;font-weight:700;color:var(--green-deep);margin:1px 0 2px;}
+.stop .de{font-size:12.5px;color:var(--mist);}
+
+/* MINIMAP */
+.minimap{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 12px 10px;margin-bottom:14px;box-shadow:0 1px 3px rgba(43,107,79,.05);}
+.minimap .mt{font-size:12px;letter-spacing:.08em;color:var(--mist);font-weight:700;margin-bottom:4px;text-align:center;}
+.minimap svg{width:100%;height:auto;display:block;}
+.minimap text{font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;fill:var(--ink);}
+.minimap text.star{fill:var(--shu);font-weight:700;}
+.minimap text.mono{font-family:"Roboto Mono",monospace;fill:var(--mist);font-size:10px;}
+.minimap .lg{font-size:11px;color:var(--mist);text-align:center;margin-top:6px;}
+.minimap .lg b{color:var(--shu);}
+
+/* FOOD */
+.food{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 15px;margin-bottom:11px;box-shadow:0 1px 3px rgba(43,107,79,.05);}
+.food.star{border-color:var(--shu);border-width:1.5px;background:#fef6f2;}
+.food .top{display:flex;align-items:baseline;gap:8px;}
+.food .top .n{font-family:"Shippori Mincho B1",serif;font-size:17px;font-weight:700;color:var(--green-deep);}
+.food .top .tag{font-size:10px;letter-spacing:.12em;color:#fff;background:var(--shu);border-radius:5px;padding:2px 7px;flex:none;}
+.food .hrs{font-family:"Roboto Mono",monospace;font-size:11.5px;color:var(--mist);margin-top:3px;}
+.food .ds{font-size:12.5px;margin-top:5px;}
+.food a{color:var(--green);font-size:12px;text-decoration:none;border-bottom:1px solid var(--green);}
+.subhead{font-size:12px;letter-spacing:.1em;color:var(--mist);margin:14px 0 9px;font-weight:700;}
+
+/* ONSEN */
+.onsen{background:linear-gradient(135deg,#5bb6c9,#3f9db4);color:#fff;border-radius:16px;padding:18px 18px 15px;box-shadow:0 3px 10px rgba(63,157,180,.2);}
+.onsen .n{font-family:"Shippori Mincho B1",serif;font-size:20px;font-weight:700;}
+.onsen .n small{display:block;font-size:11px;color:#e2f4f9;letter-spacing:.1em;margin-top:3px;font-family:"Roboto Mono",monospace;}
+.onsen .rows{margin-top:12px;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13px;}
+.onsen .rows dt{color:#d3eef4;font-size:11.5px;letter-spacing:.08em;}
+.onsen .rows dd{color:#fff;}
+.onsen a{color:#fff6da;font-size:12px;text-decoration:none;border-bottom:1px solid #fff6da;display:inline-block;margin-top:12px;}
+
+/* CHECKLIST */
+.list{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.chk{display:flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px 12px;font-size:13px;cursor:pointer;user-select:none;transition:background .15s;}
+.chk .bx{width:19px;height:19px;border:2px solid var(--green);border-radius:5px;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;transition:all .15s;}
+.chk.on{background:#e8f3ea;color:var(--mist);text-decoration:line-through;}
+.chk.on .bx{background:var(--green);}
+.chk.joke{border-style:dashed;border-color:var(--gold);}
+.chk.joke .bx{border-color:var(--gold);}
+.chk.joke.on .bx{background:var(--gold);}
+
+/* MEMO */
+.memo{background:#fdf3e7;border:1px solid #f0d3a8;border-radius:14px;padding:14px 16px;}
+.memo li{list-style:none;font-size:12.5px;padding:5px 0 5px 22px;position:relative;}
+.memo li::before{content:"\26A0\FE0E";position:absolute;left:0;color:var(--gold);font-size:12px;}
+.memo li b{color:var(--shu);}
+
+/* FOOTER */
+.foot{text-align:center;padding:34px 22px 8px;color:var(--mist);}
+.foot .go{font-family:"Shippori Mincho B1",serif;font-size:26px;color:var(--green);letter-spacing:.14em;}
+.foot .sm{font-size:11px;letter-spacing:.1em;margin-top:8px;}
+
+@media(max-width:360px){.wishes,.list{grid-template-columns:1fr;}.hero h1{font-size:34px;}}
+@media(prefers-reduced-motion:no-preference){
+  section,.hero{opacity:0;transform:translateY(14px);animation:rise .6s ease forwards;}
+  .hero{animation-delay:0s;}
+  section:nth-of-type(1){animation-delay:.08s;}
+  section:nth-of-type(2){animation-delay:.14s;}
+  section:nth-of-type(3){animation-delay:.2s;}
+  @keyframes rise{to{opacity:1;transform:none;}}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="sun"></div>
+    <div class="eyebrow">ODAKYU · TANZAWA · OYAMA</div>
+    <h1>大山<br>日帰りのしおり<small>おおやま・標高 1,252m ／ 神奈川・伊勢原</small></h1>
+    <p class="concept">滝と神社と温泉と、蕎麦とビール。軽めに歩いて、あとはゆっくり。ぜんぶ楽しむ夏の一日。</p>
+    <div class="names"><span>🌿 ちえ</span><span>🍜 みずき</span><span>🍺 よしあき</span><span>♨️ ゆう</span></div>
+    <div class="date">2026 . 08 . 29 &nbsp;SAT</div>
+    <svg class="hills" viewBox="0 0 540 78" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,78 L0,40 C120,8 200,50 300,26 C400,4 470,40 540,22 L540,78 Z" fill="#c7e6ce"/>
+      <path d="M0,78 L0,56 C130,30 230,60 340,44 C430,30 490,54 540,44 L540,78 Z" fill="#9ed3ab"/>
+      <path d="M0,78 L0,70 C160,54 260,72 380,64 C460,58 500,68 540,64 L540,78 Z" fill="#f6f9f2"/>
+    </svg>
+  </header>
+
+  <!-- 01 -->
+  <section>
+    <div class="sec-head"><span class="sec-no">01</span><div><h2>きょうの主役</h2><span class="en">EVERYONE'S WISH</span></div></div>
+    <div class="wishes">
+      <div class="wish"><div class="who">🌿 ちえ</div><div class="want">自然と、山の神社</div><div class="got">→ <b>大山阿夫利神社</b>と見晴台の眺望</div></div>
+      <div class="wish"><div class="who">🍜 みずき</div><div class="want">蕎麦と、温泉</div><div class="got">→ <b>ゆばそば</b>＆<b>弘法の里湯</b></div></div>
+      <div class="wish"><div class="who">🍺 よしあき</div><div class="want">美味しいビール</div><div class="got">→ <b>温泉あがりの一杯</b></div></div>
+      <div class="wish"><div class="who">♨️ ゆう</div><div class="want">温泉と、滝</div><div class="got">→ <b>二重滝</b>＆<b>鶴巻温泉</b></div></div>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section>
+    <div class="sec-head"><span class="sec-no">02</span><div><h2>集合と、行き方</h2><span class="en">MEET &amp; GO</span></div></div>
+    <div class="meetbox">
+      <div class="lbl">基本は現地集合</div>
+      <div class="place">伊勢原駅 北口</div>
+      <div class="time">9:55</div>
+    </div>
+    <div class="trains">
+      <div class="tr"><div class="nm">🌿 ちえ</div><div class="rt">池上（池上線）→五反田→山手線→新宿</div><div class="dep"><div class="t">7:55</div><div class="c">電車に乗る目安</div></div></div>
+      <div class="tr"><div class="nm">🍜 みずき</div><div class="rt">本駒込（南北線）→新宿</div><div class="dep"><div class="t">8:05</div><div class="c">電車に乗る目安</div></div></div>
+      <div class="tr"><div class="nm">🍺 よしあき</div><div class="rt">高輪GW（山手線）→新宿</div><div class="dep"><div class="t">8:08</div><div class="c">電車に乗る目安</div></div></div>
+    </div>
+    <div class="note">🚃 <b>新宿 8:40発「快速急行 小田原行き」</b>（当駅始発・10両）に乗れば3人いっしょ。<b>伊勢原 9:35着</b>（55分・乗換0・IC607円）。発5番線／着1番線。ゆうは<b>相模大野 9:12頃</b>から同じ列車に合流できます。</div>
+
+    <div class="pass">
+      <h3>🎫 丹沢・大山フリーパスA（これ1枚でOK）</h3>
+      <ul class="cov">
+        <li><b>小田急線</b>：発駅⇄（本厚木〜渋沢）の往復＋〔本厚木〜渋沢〕は乗り降り自由</li>
+        <li><b>神奈中バス</b>：指定区間（伊勢原駅〜大山ケーブルなど）が乗り降り自由</li>
+        <li><b>大山ケーブルカー</b>：乗り降り自由（Aキップのみ）</li>
+        <li>参道・温泉などで<b>提示優待</b>。有効期間は2日間。</li>
+      </ul>
+      <div class="deal">
+        <ul>
+          <li>ばら買い（電車往復1,214円＋バス往復＋ケーブル往復1,120円）より <b>約450円/人</b> おトク</li>
+          <li>帰りの<b>鶴巻温泉</b>もフリー区間で追加0円／弘法の里湯は提示で<b>200円引き</b></li>
+          <li><b>並ばない。</b>土曜のケーブル窓口の行列を回避、パス提示で優先乗車</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pass">
+      <h3>📱 買い方（アプリ不要・Webで完結）</h3>
+      <ol class="steps">
+        <li>スマホのブラウザで<b>「EMotオンラインチケット」</b>を開き、会員登録・ログイン</li>
+        <li>「丹沢・大山フリーパス」→<b>「Aキップ（ケーブルカー付き）」</b>を選ぶ</li>
+        <li>発駅を選択（みずき・よしあき・ちえ＝<b>新宿</b>／ゆう＝<b>相模大野</b>）→金額を確認して購入</li>
+        <li>当日：ログインして「使う」→ 小田急改札は<b>QRを読取機にかざす</b>／バス運転士・ケーブル係員には<b>画面を見せるだけ</b></li>
+        <li>帰り、小田急の降車駅（本厚木〜渋沢以外）で<b>QRをかざすと利用終了</b></li>
+      </ol>
+      <a class="linkbtn" href="https://www.odakyu-freepass.jp/tanzawa/buy.html" target="_blank" rel="noopener">購入ページを開く →</a>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section>
+    <div class="sec-head"><span class="sec-no">03</span><div><h2>一日の流れ</h2><span class="en">THE TRAIL OF THE DAY</span></div></div>
+
+    <div class="ibox">
+      <h3>🚌 行きのバス｜伊勢原駅 → 大山</h3>
+      <div class="how">改札を出たら<b>北口</b>へ。駅前ロータリーの「<b>4番のりば</b>」が〈大山ケーブル行き〉。伊10系統・所要 約25分。</div>
+      <div class="noriba">
+        <svg viewBox="0 0 320 150" xmlns="http://www.w3.org/2000/svg" aria-label="伊勢原駅北口バスのりば図">
+          <rect x="96" y="118" width="128" height="26" rx="6" fill="#eef4ec" stroke="#cfe0d3"/>
+          <text x="160" y="135" text-anchor="middle">🚉 伊勢原駅 北口 改札</text>
+          <path d="M160,118 L160,104" stroke="#82b79a" stroke-width="2" stroke-dasharray="2 4"/>
+          <ellipse cx="160" cy="70" rx="120" ry="34" fill="none" stroke="#dbe5db" stroke-width="10"/>
+          <!-- bays -->
+          <circle cx="52" cy="70" r="12" fill="#eef4ec" stroke="#9fbfa9" stroke-width="2"/><text x="52" y="74" text-anchor="middle" class="mono">1</text>
+          <circle cx="92" cy="40" r="12" fill="#eef4ec" stroke="#9fbfa9" stroke-width="2"/><text x="92" y="44" text-anchor="middle">2</text>
+          <circle cx="160" cy="30" r="12" fill="#eef4ec" stroke="#9fbfa9" stroke-width="2"/><text x="160" y="34" text-anchor="middle">3</text>
+          <circle cx="228" cy="40" r="14" fill="#e2683c" stroke="#e2683c"/><text x="228" y="45" text-anchor="middle" fill="#fff" font-weight="700">4</text>
+          <text x="228" y="16" text-anchor="middle" fill="#e2683c" font-weight="700">大山ケーブル行き</text>
+          <circle cx="268" cy="70" r="12" fill="#eef4ec" stroke="#9fbfa9" stroke-width="2"/><text x="268" y="74" text-anchor="middle">5</text>
+        </svg>
+      </div>
+      <div class="tt"><span>9:07</span><span>9:37</span><span class="rec">10:07 ←これ</span><span>10:37</span><span>11:07</span></div>
+      <div class="cap">平日ダイヤの目安。土休日は増発され本数が増えます。当日はバスロケ／アプリで確認を。</div>
+    </div>
+
+    <div class="ibox">
+      <h3>🚡 ケーブルカー｜大山ケーブル駅 → 阿夫利神社駅</h3>
+      <div class="how">こま参道を登りきった所が乗り場。約6分で標高696mの下社へ。</div>
+      <div class="tt"><span>9:00</span><span>9:20</span><span>9:40</span><span>…</span><span class="rec">11:00 ←目安</span><span>毎時 00/20/40分</span></div>
+      <div class="cap">始発9:00〜最終17:00発（土休日）。20分間隔、混雑時は臨時増発。</div>
+    </div>
+
+    <div class="ibox">
+      <h3>🚌 帰りのバス｜大山ケーブル → 伊勢原駅</h3>
+      <div class="how">乗り場は<b>行きに降りた終点「大山ケーブル」バス停</b>（＝始発なので座れます）。伊勢原駅北口ゆき・約25分。</div>
+      <div class="tt"><span>14:15</span><span>14:45</span><span class="rec">15:15 ←目安</span><span>15:45</span><span>16:15</span></div>
+      <div class="cap">平日ダイヤの目安（前後1時間）。毎時15・45分。土休日は増発。ランチの区切りで乗車を。</div>
+    </div>
+
+    <div class="trail">
+      <div class="stop"><div class="mk">01</div><div class="tm">9:55</div><div class="ti">伊勢原駅 北口 集合</div><div class="de">9:35着→北口4番のりばへ。全員そろったら出発。</div></div>
+      <div class="stop"><div class="mk">02</div><div class="tm">10:07</div><div class="ti">🚌 バスで大山へ</div><div class="de">4番のりば〈大山ケーブル〉行き・約25分。終点まで。</div></div>
+      <div class="stop"><div class="mk">03</div><div class="tm">10:32</div><div class="ti">🏮 こま参道さんぽ</div><div class="de">豆腐の食べ歩き・大山こま。石段を登ってケーブル駅へ（約15分）。</div></div>
+      <div class="stop"><div class="mk">04</div><div class="tm">11:00</div><div class="ti">🚡 大山ケーブルカー</div><div class="de">約6分で標高696mへ一気に。相模湾の眺め。</div></div>
+      <div class="stop hi"><div class="mk">05</div><div class="tm">11:05</div><div class="ti">🛕 阿夫利神社 下社</div><div class="de">2200年の歴史。参拝＆テラスから眺望（ちえの神社枠）。</div></div>
+      <div class="stop hi"><div class="mk">06</div><div class="tm">11:30</div><div class="ti">💧 二重滝 → 見晴台へ</div><div class="de">滝を見て、森の道を見晴台へ（ゆうの滝枠）。</div></div>
+      <div class="stop"><div class="mk">07</div><div class="tm">12:10</div><div class="ti">🌄 見晴台で休憩</div><div class="de">東京・横浜を一望。ベンチでひと休み。</div></div>
+      <div class="stop"><div class="mk">08</div><div class="tm">12:30</div><div class="ti">↩︎ 下社へ戻る</div><div class="de">同じ道を戻ってケーブル駅へ。</div></div>
+      <div class="stop"><div class="mk">09</div><div class="tm">13:00</div><div class="ti">🚡 ケーブルで下山</div><div class="de">こま参道までおりる。</div></div>
+      <div class="stop hi"><div class="mk">10</div><div class="tm">13:20</div><div class="ti">🍲🍺 かんき楼でランチ</div><div class="de">湯豆腐・天ぷら蕎麦で乾杯。通し営業で時間ずれてもOK。</div></div>
+      <div class="stop"><div class="mk">11</div><div class="tm">15:15</div><div class="ti">🚌🚃 鶴巻温泉へ</div><div class="de">大山ケーブル→伊勢原→小田急で1駅、鶴巻温泉。</div></div>
+      <div class="stop hi"><div class="mk">12</div><div class="tm">16:00</div><div class="ti">♨️ 弘法の里湯</div><div class="de">温泉でさっぱり → 食事処で蕎麦＆ビール（みずき・よしあき・ゆう）。</div></div>
+      <div class="stop"><div class="mk">13</div><div class="tm">18時台</div><div class="ti">🌆 解散・帰路</div><div class="de">鶴巻温泉駅から各自帰宅。おつかれさま！</div></div>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section>
+    <div class="sec-head"><span class="sec-no">04</span><div><h2>たべる・のむ</h2><span class="en">EAT &amp; DRINK</span></div></div>
+
+    <div class="minimap">
+      <div class="mt">お店の位置（ざっくり）</div>
+      <svg viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg" aria-label="こま参道のお店マップ">
+        <text x="160" y="24" text-anchor="middle" class="mono">↑ 山頂・見晴台</text>
+        <line x1="160" y1="34" x2="160" y2="372" stroke="#3f9670" stroke-width="2.5" stroke-dasharray="2 6" stroke-linecap="round"/>
+        <circle cx="160" cy="70" r="7" fill="#fff" stroke="#3f9670" stroke-width="2.5"/>
+        <text x="176" y="66">🛕 阿夫利神社 下社</text>
+        <text x="176" y="82" class="mono">茶寮 石尊（テラス）</text>
+        <circle cx="160" cy="140" r="7" fill="#fff" stroke="#3f9670" stroke-width="2.5"/>
+        <text x="176" y="144">🚡 ケーブル乗り場</text>
+        <circle cx="160" cy="196" r="7" fill="#fff" stroke="#3f9670" stroke-width="2.5"/>
+        <text x="144" y="200" text-anchor="end">えびすや</text>
+        <circle cx="160" cy="240" r="8" fill="#e2683c" stroke="#e2683c" stroke-width="2.5"/>
+        <text x="178" y="244" class="star">★ かんき楼（本命）</text>
+        <circle cx="160" cy="288" r="7" fill="#fff" stroke="#3f9670" stroke-width="2.5"/>
+        <text x="144" y="292" text-anchor="end">小川家</text>
+        <circle cx="160" cy="330" r="7" fill="#fff" stroke="#3f9670" stroke-width="2.5"/>
+        <text x="178" y="334">夢心亭</text>
+        <circle cx="160" cy="372" r="7" fill="#fff" stroke="#3f9670" stroke-width="2.5"/>
+        <text x="176" y="376">🚌 大山ケーブル バス停</text>
+      </svg>
+      <div class="lg"><b>★</b>＝まず飛び込む本命ランチ ／ 弘法の里湯は鶴巻温泉（別エリア）</div>
+    </div>
+
+    <div class="food star">
+      <div class="top"><span class="n">かんき楼</span><span class="tag">本命ランチ</span></div>
+      <div class="hrs">土 10:00–17:00 ／ 通し営業 ／ 現金のみ</div>
+      <div class="ds">こま参道。湯豆腐・猪鍋・天ぷら蕎麦。通し営業なので下山時間が読めなくても安心。まずここへ。</div>
+      <a href="https://www.google.com/maps/search/?api=1&query=かんき楼+大山+伊勢原" target="_blank" rel="noopener">地図で開く →</a>
+    </div>
+
+    <div class="subhead">— 混んでたら / 気分で こっちも —</div>
+
+    <div class="food">
+      <div class="top"><span class="n">えびすや</span></div>
+      <div class="hrs">土 9:00–16:00</div>
+      <div class="ds">ケーブル駅近く。ゆばそば・湯豆腐＋眺め。みずきの蕎麦に◎。</div>
+      <a href="https://www.google.com/maps/search/?api=1&query=えびすや+大山+伊勢原" target="_blank" rel="noopener">地図で開く →</a>
+    </div>
+    <div class="food">
+      <div class="top"><span class="n">夢心亭</span><span class="tag">夜もOK</span></div>
+      <div class="hrs">土 11:30–16:00 / 17:00–21:00</div>
+      <div class="ds">参道下部。つけ麺・蕎麦＋豆腐。下山が遅れた時の保険に。</div>
+      <a href="https://www.google.com/maps/search/?api=1&query=夢心亭+大山豆腐料理" target="_blank" rel="noopener">地図で開く →</a>
+    </div>
+    <div class="food">
+      <div class="top"><span class="n">小川家</span></div>
+      <div class="hrs">土 11:30–16:30</div>
+      <div class="ds">口コミ4.5の本格豆腐コース。ちゃんと味わいたい人に。</div>
+      <a href="https://www.google.com/maps/search/?api=1&query=小川家+大山+豆腐" target="_blank" rel="noopener">地図で開く →</a>
+    </div>
+    <div class="food">
+      <div class="top"><span class="n">茶寮 石尊</span><span class="tag">下社・絶景</span></div>
+      <div class="hrs">土 10:00–16:30</div>
+      <div class="ds">阿夫利神社下社のカフェ。相模湾を望むテラスで抹茶ティラミス。登山の休憩に。</div>
+      <a href="https://www.google.com/maps/search/?api=1&query=茶寮石尊+大山阿夫利神社" target="_blank" rel="noopener">地図で開く →</a>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section>
+    <div class="sec-head"><span class="sec-no">05</span><div><h2>しめの温泉</h2><span class="en">ONSEN</span></div></div>
+    <div class="onsen">
+      <div class="n">弘法の里湯<small>KOBO-NO-SATOYU ／ 鶴巻温泉駅 徒歩2分</small></div>
+      <dl class="rows">
+        <dt>営業</dt><dd>土 10:00–21:00</dd>
+        <dt>料金</dt><dd>土日祝 2時間 1,000円（フリーパス提示で200円引き）</dd>
+        <dt>設備</dt><dd>露天・サウナ・足湯・食事処</dd>
+        <dt>ビール</dt><dd>併設「一の屋 角十番」で蕎麦＆ビール／ハイボール<br><span style="font-size:11px;color:#d3eef4;">※食事処利用で入浴が+1時間延長（土日）</span></dd>
+      </dl>
+      <a href="https://www.google.com/maps/search/?api=1&query=弘法の里湯+鶴巻温泉" target="_blank" rel="noopener">地図で開く →</a>
+    </div>
+  </section>
+
+  <!-- 06 -->
+  <section>
+    <div class="sec-head"><span class="sec-no">06</span><div><h2>持ちもの</h2><span class="en">PACKING · tap to check</span></div></div>
+    <div class="list" id="list">
+      <div class="chk"><span class="bx">✓</span>飲み物（1L以上）</div>
+      <div class="chk"><span class="bx">✓</span>行動食（お菓子・飴）</div>
+      <div class="chk"><span class="bx">✓</span>帽子</div>
+      <div class="chk"><span class="bx">✓</span>日焼け止め</div>
+      <div class="chk"><span class="bx">✓</span>手持ち扇風機</div>
+      <div class="chk"><span class="bx">✓</span>タオル（温泉・汗ふき用）</div>
+      <div class="chk"><span class="bx">✓</span>虫除け（ヒル対策）</div>
+      <div class="chk"><span class="bx">✓</span>歩きやすい靴</div>
+      <div class="chk"><span class="bx">✓</span>ザック</div>
+      <div class="chk"><span class="bx">✓</span>着替え（上下・靴下）</div>
+      <div class="chk"><span class="bx">✓</span>現金（かんき楼用）</div>
+      <div class="chk"><span class="bx">✓</span>モバイルバッテリー</div>
+      <div class="chk"><span class="bx">✓</span>折りたたみ傘/カッパ</div>
+      <div class="chk"><span class="bx">✓</span>薬（必要に応じて）</div>
+      <div class="chk joke"><span class="bx">✓</span>元気💪</div>
+    </div>
+  </section>
+
+  <!-- 07 -->
+  <section>
+    <div class="sec-head"><span class="sec-no">07</span><div><h2>気をつけメモ</h2><span class="en">NOTES</span></div></div>
+    <ul class="memo">
+      <li><b>残暑ピーク。</b>こまめに水分・塩分を。標高が上がると涼しいけど、麓は暑い。</li>
+      <li><b>夏はヤマビル。</b>見晴台〜二重滝あたりで出るので、足元に虫除けスプレーを。</li>
+      <li><b>土曜は混雑。</b>ケーブルカー・お店とも。フリーパスは前夜にWeb購入でスムーズに。</li>
+      <li>バス・ケーブルは<b>約20分間隔</b>。時刻は当日アプリで最終確認を。</li>
+    </ul>
+  </section>
+
+  <footer class="foot">
+    <div class="go">いってらっしゃい</div>
+    <div class="sm">大山 · 2026.08.29(土) · 滝 / 神社 / 温泉 / 蕎麦 / ビール</div>
+  </footer>
+
+</div>
+
+<script>
+document.getElementById('list').addEventListener('click',function(e){
+  var c=e.target.closest('.chk'); if(c) c.classList.toggle('on');
+});
+</script>
+</body>
+</html>
